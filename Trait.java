@@ -10,4 +10,9 @@ public class Trait
 	traitId = id;
 		
 	}
+	
+	public int getId()
+	{
+		return traitId;
+	}
 }

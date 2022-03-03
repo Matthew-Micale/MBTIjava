@@ -25,7 +25,7 @@ public class Question
 		return trait2;
 	}
 	
-	public int getWeight()
+	public int getQWeight()
 	{
 	return weight;
 }

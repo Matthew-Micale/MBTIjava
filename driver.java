@@ -14,6 +14,9 @@ public static void main(String[] args)
 	Trait F = new Trait("Feeling",6);
 	Trait J = new Trait("Judging",7);
 	Trait P = new Trait("Perceiving",8);
+	Trait HS = new Trait("Highly-Stressed",9);
+	Trait LS = new Trait("Low-Stressed",10);
+	
 	
 	int numOfQs = 5;
 	
