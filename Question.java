@@ -15,4 +15,18 @@ public class Question
 		trait2 = t2;
 	}
 	
+	public Trait getTrait1()
+	{
+		return trait1;
+	}
+	
+	public Trait getTrait2()
+	{
+		return trait2;
+	}
+	
+	public int getWeight()
+	{
+	return weight;
+}
 }

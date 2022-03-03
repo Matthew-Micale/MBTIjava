@@ -15,7 +15,10 @@ public static void main(String[] args)
 	Trait J = new Trait("Judging",7);
 	Trait P = new Trait("Perceiving",8);
 	
-	Question q1 = new Question("I prefer working alone rather than a larger group",10,E,I);
+	int numOfQs = 5;
+	
+	Question[] allQs = new Question[numOfQs];
+	allQs[0] =  new Question("I prefer working alone rather than a larger group",10,E,I);
 	
 }
 
