@@ -4,7 +4,8 @@ public class driver
 
 public static void main(String[] args)
 {
-// Driver code here
+// Instantiating all classes
+	
 	Trait I = new Trait("Introversion",1);
 	Trait E = new Trait("Extraversion",2);
 	Trait N = new Trait("Intuition",3);
@@ -13,6 +14,8 @@ public static void main(String[] args)
 	Trait F = new Trait("Feeling",6);
 	Trait J = new Trait("Judging",7);
 	Trait P = new Trait("Perceiving",8);
+	
+	Question q1 = new Question("I prefer working alone rather than a larger group",10,E,I);
 	
 }
 
