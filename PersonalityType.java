@@ -46,7 +46,7 @@ public void addResponse(Response r)
 	case 9:
 		hsScore += weight;
 	case 10:
-		lsScore += weight; // HELLO
+		lsScore += weight; // HELLO PEOPLE
 	}
 }
 }
