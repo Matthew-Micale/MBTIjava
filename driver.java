@@ -17,7 +17,7 @@ public static void main(String[] args)
 	Trait HS = new Trait("Highly-Stressed",9);
 	Trait LS = new Trait("Low-Stressed",10);
 	
-	System.out.print("I came  here");
+	System.out.print("I came  hsfdefefefeere");
 	
 	int numOfQs = 5;
 	
