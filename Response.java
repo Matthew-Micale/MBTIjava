@@ -1,5 +1,6 @@
 public class Response
 {
+  public PersonalityType type;
   public Question questionAnswered;
   public int scaledResponse;
   public Trait delta;
@@ -8,6 +9,7 @@ public class Response
   {
 	  questionAnswered = q;
 	  scaledResponse = q.getWeight();
+	  delta = d;
 	  
   }
   
