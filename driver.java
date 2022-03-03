@@ -22,6 +22,11 @@ public static void main(String[] args)
 	
 	Question[] allQs = new Question[numOfQs];
 	allQs[0] =  new Question("I prefer working alone rather than a larger group",10,E,I);
+	//add all questions here
+	
+	int numOfCs = 10;
+	Career[] allCs = new Career[numOfCs];
+	//allCs[0] = new Career("Engineer",null); // add letter acronym for personality type for career
 	
 }
 
