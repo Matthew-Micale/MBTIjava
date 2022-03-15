@@ -15,6 +15,12 @@ double pScore = 0;
 double hsScore = 0;
 double lsScore = 0;
 
+Trait sphere1;
+Trait sphere2;
+Trait sphere3;
+Trait sphere4;
+Trait sphere5;
+
 public void addResponse(Response r)
 {
 	Trait d = r.getDelta();

@@ -17,7 +17,8 @@ public static void main(String[] args)
 	Trait HS = new Trait("Highly-Stressed",9);
 	Trait LS = new Trait("Low-Stressed",10);
 	
-	System.out.print("I came  hsfdefefefeere");
+	FinalPersonalityType INTJH = new FinalPersonalityType("INTJH",I,N,T,J,HS);
+	FinalPersonalityType INTJL = new FinalPersonalityType("INTJL",I,N,T,J,LS);
 	
 	int numOfQs = 5;
 	
