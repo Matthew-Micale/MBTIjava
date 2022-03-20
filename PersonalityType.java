@@ -21,11 +21,10 @@ Trait sphere3;
 Trait sphere4;
 Trait sphere5;
 
-public void addResponse(Response r)
+public void addResponse(int id, int weight)
 {
-	Trait d = r.getDelta();
-	int weight = r.getWeight();
-	switch(d.getId())
+
+	switch(id)
 	{
 	case 1:
 		iScore += weight;
@@ -47,12 +46,57 @@ public void addResponse(Response r)
 		break;
 	case 7:
 		jScore += weight;
+		break;
 	case 8:
 		pScore += weight;
+		break;
 	case 9:
 		hsScore += weight;
+		break;
 	case 10:
-		lsScore += weight; // HELLO PEOPLE more comment
+		lsScore += weight;
+		break;
 	}
 }
+	
+	public double getScore(int tID)
+	{
+
+		switch(tID)
+		{
+		case 1:
+			return iScore;
+
+		case 2:
+			return eScore;
+
+		case 3:
+			return nScore;
+
+		case 4:
+			return sScore;
+
+		case 5:
+			return tScore;
+
+		case 6:
+			return fScore;
+
+		case 7:
+			return jScore;
+
+		case 8:
+			return pScore;
+
+		case 9:
+			return hsScore;
+
+		case 10:
+			return lsScore;
+		
+		default:
+			return 0;
+		}
+	}
+
 }

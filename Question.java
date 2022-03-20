@@ -29,4 +29,8 @@ public class Question
 	{
 	return weight;
 }
+	public String getText()
+	{
+		return text;
+	}
 }
