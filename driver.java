@@ -56,7 +56,6 @@ public static void main(String[] args)
 		int weight = allQs[i].getQWeight();
 		calculate.addResponse(id,weight);
 		
-		
 	}
 	
 }
