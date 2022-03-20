@@ -45,20 +45,25 @@ public static void main(String[] args)
 	
 	Scanner scan = new Scanner(System.in);
 	
-	for(int i = 0; i < numOfQs; i++)
+	for(int i = 0; i < numOfQs;)
 	{
+		
 		System.out.println(allQs[i].getText());
 		System.out.println("Disagree completely: 1 2 Neutral: 3 4 Agree Comletely: 5");
 		int res = scan.nextInt();
-		allRs[i] = new Response(allQs[i],res);
-		Trait temp = allRs[i].getDelta();
-		int id = temp.getId();
-		int weight = allQs[i].getQWeight();
-		calculate.addResponse(id,weight);
-		
-		
+		if(res > 5 || res < 1) {
+			System.out.println("Please input a number from 1-5");
+		}
+		else {
+			allRs[i] = new Response(allQs[i],res);
+			Trait temp = allRs[i].getDelta();
+			int id = temp.getId();
+			int weight = allQs[i].getQWeight();
+			calculate.addResponse(id,weight);
+			i++;
+		}
+			
 	}
-	
 }
 
 }
