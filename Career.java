@@ -12,4 +12,13 @@ public class Career
 	  
   }
   
+  public boolean checkMatch(FinalPersonalityType temp)
+  {
+	  if(temp == pt1 || temp == pt2)
+		  return true;
+	  else
+		  return false;
+  }
+  }
+  
 }
