@@ -97,36 +97,77 @@ public static void main(String[] args)
 		}
 	}
 	
+	String calculate1 = "";
+	
 	Trait s1;
 	if(calculate.getScore(1) > calculate.getScore(2))
+	{
 		s1 = I;
+		calculate1 += "I";
+	}
 	else
+	{
 		s1 = E;
+		calculate1 += "E";
+	}
 	
 	Trait s2;
 	if(calculate.getScore(3) > calculate.getScore(4))
+	{
 		s2 = N;
+		calculate1 += "N";
+	}
 	else
+	{
 		s2 = S;
+		calculate1 += "S";
+	}
 	
 	Trait s3;
 	if(calculate.getScore(5) > calculate.getScore(6))
+	{
 		s3 = T;
+		calculate1 += "T";
+	}
 	else
+	{
 		s3 = F;
+		calculate1 += "F";
+	}
 	
 	Trait s4;
 	if(calculate.getScore(7) > calculate.getScore(8))
+	{
 		s4 = J;
+		calculate1 += "J";
+	}
 	else
+	{
 		s4 = P;
+		calculate1 += "P";
+	}
 	
 	Trait s5;
 	if(calculate.getScore(9) > calculate.getScore(10))
+	{
 		s5 = HS;
+		calculate1 += "HS";
+	}
 	else
+	{
 		s5 = LS;
+		calculate1 += "LS";
+	}
 		
+	FinalPersonalityType calculateFinal;
+	
+	switch(calculate1)
+	{
+	case "INTJH":
+		calculateFinal = INTJH;
+		break;
+	
+	}
 	
 }
 
