@@ -151,12 +151,12 @@ public static void main(String[] args)
 	if(calculate.getScore(9) > calculate.getScore(10))
 	{
 		s5 = HS;
-		calculate1 += "HS";
+		calculate1 += "H";
 	}
 	else
 	{
 		s5 = LS;
-		calculate1 += "LS";
+		calculate1 += "L";
 	}
 		
 	FinalPersonalityType calculateFinal;
@@ -166,6 +166,7 @@ public static void main(String[] args)
 	case "INTJH":
 		calculateFinal = INTJH;
 		break;
+	
 	
 	}
 	
