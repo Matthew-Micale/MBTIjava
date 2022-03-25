@@ -20,11 +20,16 @@ public static void main(String[] args)
 	Trait HS = new Trait("Highly-Stressed",9);
 	Trait LS = new Trait("Low-Stressed",10);
 	
+	//enum for objects
+	
 	FinalPersonalityType INTJH = new FinalPersonalityType("INTJH",I,N,T,J,HS);
 	FinalPersonalityType INTJL = new FinalPersonalityType("INTJL",I,N,T,J,LS);
 	FinalPersonalityType INTPH = new FinalPersonalityType("INTJH",I,N,T,P,HS);
 	FinalPersonalityType INTPL = new FinalPersonalityType("INTJL",I,N,T,P,LS);
 	FinalPersonalityType INFJH = new FinalPersonalityType("INFJH",I,N,F,J,HS);
+	FinalPersonalityType INFJL = new FinalPersonalityType("INFJL",I,N,F,J,LS);
+	FinalPersonalityType INFPH = new FinalPersonalityType("INFPH",I,N,F,P,HS);
+	FinalPersonalityType INFPL = new FinalPersonalityType("INFPL"I,N,F,P,LS)
 	
 	
 	// add all personality types here
