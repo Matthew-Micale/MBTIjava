@@ -1,10 +1,15 @@
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class driver
 
 {
 
-public static void main(String[] args)
+public static void main(String[] args) throws IOException 
 {
 // Instantiating all classes
 	
@@ -55,11 +60,125 @@ public static void main(String[] args)
 	FinalPersonalityType ESFPL = new FinalPersonalityType("ESFPL",E,S,F,P,LS);
 	
 	
+
+	File csvfile = new File("C:\\Users\\alber\\Documents\\Book1.csv");
+	BufferedReader br = new BufferedReader( new FileReader(csvfile));
+	String line = "";
+	ArrayList<String> questions = new ArrayList<String>(0);
+	ArrayList<Integer> weight = new ArrayList<Integer>(0);
+	ArrayList<String> t1 = new ArrayList<String>(0);
+	ArrayList<String> t2 = new ArrayList<String>(0);
 	
+	try {
+		
+		while((line =br.readLine())!= null) {
+			String[] count = line.split(",");
+			questions.add(count[0]);
+			weight.add( Integer.parseInt(count[3]));
+			t1.add(count[1]);
+			t2.add(count[2]);
+			
+		}
+		
+		
+	}
+	catch(FileNotFoundException e) {
+		e.printStackTrace();
+		
+	}
+System.out.println("questions"+questions);
+System.out.println("weight"+weight);
+System.out.println("traits"+t1 + " " +t2+ "");
+
+
+
+
+ArrayList<Trait> tobj1 = new ArrayList<Trait>(0);
+ArrayList<Trait> tobj2 = new ArrayList<Trait>(0);
+
+
+
+for(String x : t1){
+		
+	switch(x) {
+   case "I" :
+      tobj1.add(I);
+      break; 
+   case "E" :
+      tobj1.add(E);
+      break; 
+   case "N" :
+      tobj1.add(N);
+      break; 
+   case "S" :
+      tobj1.add(S);
+      break; 
+   case "J" :
+      tobj1.add(J);
+      break; 
+   case "P" :
+      tobj1.add(P);
+      break; 
+   case "LS" :
+      tobj1.add(LS) ;
+   case "HS" :
+      tobj1.add(HS);
+      break; 
+       
+   // You can have any number of case statements.
+   default : // Optional
+      // Statements
+	}
+}
+	
+
+for(String x : t2 ){
+	
+	switch(x) {
+   case "I" :
+      tobj2.add(I);
+      break; 
+   case "E" :
+      tobj2.add(E);
+      break; 
+   case "N" :
+      tobj2.add(N);
+      break; 
+   case "S" :
+      tobj2.add(S);
+      break; 
+   case "J" :
+      tobj2.add(J);
+      break; 
+   case "P" :
+      tobj2.add(P);
+      break; 
+   case "LS" :
+      tobj2.add(LS) ;
+   case "HS" :
+      tobj2.add(HS);
+      break; 
+       
+   // You can have any number of case statements.
+   default : // Optional
+      // Statements
+	}
+}	
+		
+		
+		
+		
+		int numOfQs = questions.size() ;
+		Question[] allQs = new Question[numOfQs];
+		for (int i =0; i<numOfQs; i++) {
+			allQs[i] = new Question(questions.get(i),weight.get(i),tobj1.get(i),tobj2.get(i));
+		}
+			
+		
+
 	// add all personality types here
 	
-	int numOfQs = 5;
-	
+  /*
 	Question[] allQs = new Question[numOfQs];
 	allQs[0] = new Question("I prefer working alone rather than a larger group",10,E,I);
 	allQs[1] = new Question("I focus on details rather than the bigger picture",10,N,S);
@@ -67,7 +186,9 @@ public static void main(String[] args)
 	allQs[3] = new Question("When going on vacation, I like to make a schedule",10,P,J);
 	allQs[4] = new Question("I get stressed really easily",10,LS,HS);
 	//add all questions here
+	 * 
 	
+*/	
 	Response[] allRs = new Response[numOfQs];
 	
 	int numOfCs = 10;
@@ -77,6 +198,16 @@ public static void main(String[] args)
 	PersonalityType calculate = new PersonalityType();
 	
 	Scanner scan = new Scanner(System.in);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	for(int i = 0; i < numOfQs;)
 	{
@@ -91,8 +222,8 @@ public static void main(String[] args)
 			allRs[i] = new Response(allQs[i],res);
 			Trait temp = allRs[i].getDelta();
 			int id = temp.getId();
-			int weight = allQs[i].getQWeight();
-			calculate.addResponse(id,weight);
+			int w1 = allQs[i].getQWeight();
+			calculate.addResponse(id,w1);
 			i++;
 		}
 	}
@@ -173,3 +304,4 @@ public static void main(String[] args)
 }
 
 }
+
