@@ -19,6 +19,5 @@ public class Career
 	  else
 		  return false;
   }
-  }
   
 }
