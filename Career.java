@@ -1,12 +1,24 @@
 public class Career
 {
   public String jobTitle;
-  public PersonalityType pt;
+  public FinalPersonalityType pt1;
+  public FinalPersonalityType pt2;
   
-  public Career(String jt, PersonalityType p)
+  public Career(String jt, FinalPersonalityType p1, FinalPersonalityType p2)
   {
 	  jobTitle = jt;
-	  pt = p;
+	  pt1 = p1;
+	  pt2 = p2;
+	  
+  }
+  
+  public boolean checkMatch(FinalPersonalityType temp)
+  {
+	  if(temp == pt1 || temp == pt2)
+		  return true;
+	  else
+		  return false;
+  }
   }
   
 }
